@@ -83,7 +83,7 @@ nav a{
 
 .OurDetails{
     padding: 80px 40px;
-    background-image: url(/Images/School.jpg);
+    background-image: url("./images/School.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 70vh;
@@ -392,7 +392,7 @@ body.dark-mode .FooterEnd {
     background-color: black;
 }
 
-.body.darkmode .nav a{
+.body.darkmode .NavMenu a{
     color: white;
 }
 
@@ -655,8 +655,8 @@ body.dark-mode .FooterEnd {
 
     /* CHANGE HAMBURGER TO CLOSE ICON */
 
-    #MenuToggle:checked + .Hamburger i::before {
-        content: "\f00d";
+    #MenuToggle:checked ~ .Hamburger i::before {
+    content: "\f00d";
     }
 
     /* HERO SECTION */
