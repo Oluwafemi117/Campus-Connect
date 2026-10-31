@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join CampusConnect</title>
+
+    <link rel="stylesheet" href="register.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="register-page">
+
+        <!-- LEFT SECTION -->
+        <section class="left-section">
+
+            <div class="overlay"></div>
+
+            <div class="left-content">
+
+                <!-- LOGO -->
+                <div class="brand">
+                    <i class="fa-solid fa-graduation-cap brand-icon"></i>
+
+                    <h1>
+                        Campus<br>
+                        <span>Connect</span>
+                    </h1>
+                </div>
+
+                <p class="tagline">
+                    Your Campus. Your Community.<br>
+                    All in One Place.
+                </p>
+
+                <!-- FEATURES -->
+                <div class="features">
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <h3>Connect</h3>
+                            <p>Find and connect with<br>
+                               fellow students.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+
+                        <div>
+                            <h3>Stay Informed</h3>
+                            <p>Get the latest news, events<br>
+                               and updates.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <div>
+                            <h3>Lost & Found</h3>
+                            <p>Report and find lost items<br>
+                               on campus.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+
+                        <div>
+                            <h3>Resources</h3>
+                            <p>Access useful links, support<br>
+                               and campus services.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SLOGAN -->
+                <div class="campus-slogan">
+                    <p>Same Campus.<br>Stronger Together.</p>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SECTION -->
+        <section class="right-section">
+
+            <div class="top-login">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </div>
+
+            <div class="register-card">
+
+                <div class="badge">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Create Account
+                </div>
+
+                <h2>Join CampusConnect</h2>
+
+                <p class="description">
+                    Create your account and be part of a smarter,<br class="desktop-break">
+                    more connected campus community.
+                </p>
+
+
+                <!-- REGISTRATION FORM -->
+                <form action="#" method="POST">
+
+                    <!-- FULL NAME -->
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+
+                        <div class="input-box">
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required>
+                        </div>
+                    </div>
+
+
+                    <!-- EMAIL AND MATRIC NUMBER -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+
+                            <div class="input-box">
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="matric">Matric Number</label>
+
+                            <div class="input-box">
+                                <i class="fa-regular fa-id-card"></i>
+
+                                <input
+                                    type="text"
+                                    id="matric"
+                                    name="matric"
+                                    placeholder="e.g. 23/ENG/001"
+                                    required>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHONE NUMBER -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+
+                        <div class="input-box">
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+234 801 234 5678"
+                                autocomplete="tel"
+                                required>
+                        </div>
+                    </div>
+
+
+                    <!-- DEPARTMENT -->
+                    <div class="form-group">
+                        <label for="department">Department</label>
+
+                        <div class="input-box">
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                            <select
+                                id="department"
+                                name="department"
+                                required>
+
+                                <option value="" disabled selected>
+                                    Select your department
+                                </option>
+
+                                <option value="computer-science">
+                                    Computer Science
+                                </option>
+
+                                <option value="information-technology">
+                                    Information Technology
+                                </option>
+
+                                <option value="software-engineering">
+                                    Software Engineering
+                                </option>
+
+                                <option value="cybersecurity">
+                                    Cybersecurity
+                                </option>
+
+                                <option value="mathematics">
+                                    Mathematics
+                                </option>
+
+                                <option value="physics">
+                                    Physics
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                            <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        </div>
+                    </div>
+
+
+                    <!-- LEVEL -->
+                    <div class="form-group">
+                        <label for="level">Level</label>
+
+                        <div class="input-box">
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <select
+                                id="level"
+                                name="level"
+                                required>
+
+                                <option value="" disabled selected>
+                                    Select your level
+                                </option>
+
+                                <option value="100">100 Level</option>
+                                <option value="200">200 Level</option>
+                                <option value="300">300 Level</option>
+                                <option value="400">400 Level</option>
+                                <option value="500">500 Level</option>
+                                <option value="postgraduate">
+                                    Postgraduate
+                                </option>
+
+                            </select>
+
+                            <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        </div>
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <div class="input-box">
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required>
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                aria-label="Show password"
+                                onclick="togglePassword('password', this)">
+
+                                <i class="fa-regular fa-eye-slash"></i>
+
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="form-group">
+                        <label for="confirm-password">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-box">
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirm_password"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required>
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                aria-label="Show password"
+                                onclick="togglePassword('confirm-password', this)">
+
+                                <i class="fa-regular fa-eye-slash"></i>
+
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- ACCOUNT TYPE -->
+                    <div class="form-group">
+                        <label>Account Type</label>
+
+                        <div class="account-options">
+
+                            <label class="account-card">
+
+                                <input
+                                    type="radio"
+                                    name="account_type"
+                                    value="student"
+                                    checked>
+
+                                <i class="fa-regular fa-user account-icon"></i>
+
+                                <span class="account-text">
+                                    <strong>Student</strong>
+
+                                    <small>
+                                        For undergraduate and
+                                        postgraduate students
+                                    </small>
+                                </span>
+
+                            </label>
+
+
+                            <label class="account-card">
+
+                                <input
+                                    type="radio"
+                                    name="account_type"
+                                    value="staff">
+
+                                <i class="fa-solid fa-users account-icon"></i>
+
+                                <span class="account-text">
+                                    <strong>Staff</strong>
+
+                                    <small>
+                                        For academic and
+                                        non-academic staff
+                                    </small>
+                                </span>
+
+                            </label>
+
+                        </div>
+                    </div>
+
+
+                    <!-- TERMS AND CONDITIONS -->
+                    <div class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required>
+
+                        <label for="terms">
+                            I agree to the
+                            <a href="terms.html">Terms and Conditions</a>
+                            and
+                            <a href="privacy.html">Privacy Policy</a>
+                        </label>
+
+                    </div>
+
+
+                    <!-- CREATE ACCOUNT BUTTON -->
+                    <button type="submit" class="create-account">
+                        Create Account
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+
+                    <!-- DIVIDER -->
+                    <div class="divider">
+                        <span></span>
+                        <p>or</p>
+                        <span></span>
+                    </div>
+
+
+                    <!-- GOOGLE BUTTON -->
+                    <button
+                        type="button"
+                        class="google-button">
+
+                        <i class="fa-brands fa-google google-icon"></i>
+
+                        Sign up with Google
+
+                    </button>
+
+
+                    <!-- BACK TO HOME -->
+                    <a href="Landingpage.html" class="back-home">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to Home
+                    </a>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- SMALL JAVASCRIPT FOR PASSWORD VISIBILITY -->
+    <script>
+        function togglePassword(inputId, button) {
+            const input = document.getElementById(inputId);
+            const icon = button.querySelector("i");
+
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+                button.setAttribute("aria-label", "Hide password");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+                button.setAttribute("aria-label", "Show password");
+            }
+        }
+
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function (event) {
+            const password = document.getElementById("password").value;
+            const confirmPassword =
+                document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                alert("Passwords do not match. Please try again.");
+            }
+        });
+    </script>
+
+</body>
+</html>

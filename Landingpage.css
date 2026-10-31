@@ -1,0 +1,822 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.Logo{
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.Logo h4{
+    color: blue;
+    font-size: 20px;
+}
+
+#MenuToggle{
+    display: none;
+}
+
+.Hamburger{
+    display: none;
+}
+
+.NavMenu{
+    display: flex;
+    gap: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+#DarkModeToggle {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: white;
+    color: #222;
+    cursor: pointer;
+}
+
+.Login{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Login a{
+    text-decoration: none;
+}
+
+.LGN{
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.Register{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.OurDetails{
+    padding: 80px 40px;
+    background-image: url(/Images/School.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+.Details-1 {
+    border: 2px solid;
+    width: 27%;
+    padding: 3px 3px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    background-color: transparent;
+}
+
+.Details-2 h1{
+    width: 40%;
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.Details-2 p{
+    width: 40%;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.GetStarted{
+    display: flex;
+    gap: 20px;
+}
+
+.GetStarted a{
+    text-decoration: none;
+}
+
+.GST{
+    background-color: blue;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.LRM{
+    background-color: transparent;
+    padding: 10px 30px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.ALL-1 h2{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.ALL-2 h2{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.Features-1, .Features-2{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding: 10px 40px;
+}
+
+.Profile{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;
+}
+
+.Profile i{
+    color: white;
+    background-color: blue;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Planner{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;
+}
+
+.Planner i{
+    color: white;
+    background-color: green;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Announcement{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;
+}
+
+.Announcement i{
+    color: white;
+    background-color: purple;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Found{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;
+}
+
+.Found i{
+    color: white;
+    background-color: orange;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.MarketPlace{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;
+}
+
+.MarketPlace i{
+    color: white;
+    background-color: blueviolet;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Notifications{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;
+}
+
+.Notifications i{
+    color: white;
+    background-color: greenyellow;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Mode{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;
+}
+
+.Mode i{
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Connect{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;
+}
+
+.Connect i{
+    color: white;
+    background-color: rgb(146, 60, 60);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.ProfileText p{
+    width: 90%;
+}
+
+.FooterEnd{
+    display: flex;
+    padding: 10px 40px;
+    align-items: center;
+    background-color: rgb(236, 229, 229);
+}
+
+.FooterAbout h4{
+    color: blue;
+    font-size: large;
+    margin-bottom: 5px;
+}
+
+.FooterAbout h2{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.FooterAbout p{
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.key h2{
+    color: blue;
+}
+
+.Experience{
+    display: flex;
+    gap: 20px;
+}
+
+.Experience p{
+    width: 100%;
+}
+
+.FooterImage img{
+    width: auto;
+    height: 20rem;
+    border-radius: 20px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .LGN{
+    border: 1px solid white;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .NavMenu {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .NavMenu nav a {
+    color: white;
+}
+
+body.dark-mode .Features-1,
+body.dark-mode .Features-2 {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .Profile,
+body.dark-mode .Planner,
+body.dark-mode .Announcement,
+body.dark-mode .Found,
+body.dark-mode .MarketPlace,
+body.dark-mode .Notifications,
+body.dark-mode .Mode,
+body.dark-mode .Connect {
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode #DarkModeToggle {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode .FooterEnd {
+    background-color: black;
+}
+
+.body.darkmode .nav a{
+    color: white;
+}
+
+
+/* =========================
+   TABLET: 601px–900px
+========================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    header {
+        padding: 15px 25px;
+        gap: 20px;
+    }
+
+    .NavMenu {
+        gap: 20px;
+    }
+
+    .Login {
+        gap: 8px;
+    }
+
+    .LGN,
+    .Register {
+        padding: 10px 12px;
+    }
+
+    .OurDetails {
+        padding: 70px 25px;
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .Details-1 {
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .Details-2 h1 {
+        width: 65%;
+        font-size: 48px;
+    }
+
+    .Details-2 p {
+        width: 65%;
+        font-size: 18px;
+    }
+
+    .Features-1,
+    .Features-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .Profile,
+    .Planner,
+    .Announcement,
+    .Found,
+    .MarketPlace,
+    .Notifications,
+    .Mode,
+    .Connect {
+        padding: 20px 10px;
+    }
+
+    .FooterEnd {
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .FooterImage img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/* =========================
+   MOBILE: 600px AND BELOW
+========================= */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 70px;
+        padding: 12px 14px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        background-color: white;
+        box-sizing: border-box;
+        z-index: 1001;
+    }
+
+    .Logo {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 17px;
+        white-space: nowrap;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .Logo h4 {
+        font-size: 17px;
+    }
+
+    #MenuToggle {
+        display: none;
+    }
+
+    /* Keep moon, Register and hamburger together */
+
+    .Login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        margin: 0 0 0 auto;
+        flex-shrink: 0;
+    }
+
+    #DarkModeToggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        background: transparent;
+        color: #222;
+        font-size: 17px;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+
+    .LGN {
+        display: none;
+    }
+
+    .Register {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .Hamburger {
+        display: block;
+        font-size: 23px;
+        line-height: 1;
+        cursor: pointer;
+        margin: 0;
+        flex-shrink: 0;
+        color: #222;
+    }
+
+    /* SLIDE-OUT NAVIGATION */
+
+    .NavMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 28px;
+
+        position: fixed;
+        top: 70px;
+        right: 0;
+        left: auto;
+
+        width: min(80%, 320px);
+        height: 100vh;
+        /* height: calc(100dvh - 70px); */
+
+        padding: 30px 24px;
+        box-sizing: border-box;
+        overflow-y: auto;
+
+        background: rgba(20, 20, 30, 0.92);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(100%);
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+        z-index: 1000;
+    }
+
+    #MenuToggle:checked ~ .NavMenu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    .NavMenu nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 100%;
+    }
+
+    nav a {
+        color: white;
+    }
+
+    .NavMenu nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    /* LOGIN INSIDE THE SLIDE-OUT MENU */
+
+    .NavMenu .Login {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .NavMenu .LGN {
+        display: none;
+    }
+
+    .NavMenu .Register {
+        padding: 10px 20px;
+    }
+
+    /* CHANGE HAMBURGER TO CLOSE ICON */
+
+    #MenuToggle:checked + .Hamburger i::before {
+        content: "\f00d";
+    }
+
+    /* HERO SECTION */
+
+    .OurDetails {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 110px 20px 45px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .Details-1 {
+        width: fit-content;
+        max-width: 100%;
+        font-size: 12px;
+        padding: 5px 10px;
+        margin-bottom: 12px;
+    }
+
+    .Details-2 h1 {
+        width: 100%;
+        font-size: clamp(32px, 8vw, 40px);
+        line-height: 1.15;
+        margin-bottom: 14px;
+    }
+
+    .Details-2 p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .GetStarted {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .GST,
+    .LRM {
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    /* FEATURES */
+
+    .Features-1,
+    .Features-2 {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        padding: 15px 18px;
+    }
+
+    .Profile,
+    .Planner,
+    .Announcement,
+    .Found,
+    .MarketPlace,
+    .Notifications,
+    .Mode,
+    .Connect {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 5px;
+        min-width: 0;
+    }
+
+    .Profile i,
+    .Planner i,
+    .Announcement i,
+    .Found i,
+    .MarketPlace i,
+    .Notifications i,
+    .Mode i,
+    .Connect i {
+        flex-shrink: 0;
+    }
+
+    .ProfileText {
+        min-width: 0;
+    }
+
+    .ProfileText p {
+        width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .ALL-1 h2,
+    .ALL-2 h2 {
+        font-size: 18px;
+    }
+
+    /* FOOTER */
+
+    .FooterEnd {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+        padding: 25px 20px;
+    }
+
+    .FooterAbout {
+        width: 100%;
+    }
+
+    .FooterAbout p {
+        width: 100%;
+        line-height: 1.5;
+    }
+
+    .Experience {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .Experience > div {
+        width: 100%;
+    }
+
+    .Experience p {
+        width: 100%;
+    }
+
+    .FooterImage {
+        width: 100%;
+    }
+
+    .FooterImage img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    /* DARK MODE */
+
+    body.dark-mode header {
+        background-color: #1e1e1e;
+    }
+
+    body.dark-mode .Hamburger {
+        color: white;
+    }
+
+    body.dark-mode #DarkModeToggle {
+        background-color: #333;
+        color: white;
+        border-color: #555;
+    }
+
+    body.dark-mode .NavMenu {
+        background: rgba(20, 20, 30, 0.96);
+    }
+}

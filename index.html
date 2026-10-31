@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Landingpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header id="Home">
+    <div class="Logo">Campus <h4>Connect</h4></div>
+
+    <input type="checkbox" id="MenuToggle">
+
+    <nav class="NavMenu">
+        <a href="">Home</a>
+        <a href="#features">Features</a>
+        <a href="#About">About</a>
+    </nav>
+
+    <div class="Login">
+        <button id="DarkModeToggle" aria-label="Switch dark mode">
+            <i class="fa-regular fa-moon"></i>
+        </button>
+
+        <a href="Login.html" class="LGN">Login</a>
+        <a href="Register.html" class="Register">Register</a>
+    </div>
+
+    <label for="MenuToggle" class="Hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+</header>
+
+    <section>
+        <div class="OurDetails">
+            <div class="Details-1">
+                <p>Your Campus, Your Community, One Platform.</p>
+            </div>
+
+            <div class="Details-2">
+                <h1>Campus Life Made Easier Together</h1>
+                <p>CampusConnect brings students together and makes campus life easier. Get the latest updates, connect with fellow students, manage your studies - all in one place</p>
+            </div>
+
+            <div class="GetStarted">
+                <a href="Register.html" class="GST">Get Started</a>
+                <a href="#About" class="LRM">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ALL-1" id="features">
+        <div class="Features-1">
+            <div class="Profile">
+                <i class="fa-solid fa-user"></i>
+                <div class="ProfileText">
+                    <h2>Student Profiles</h2>
+                    <p>View amd manage your personal and academic information</p>
+                </div>
+            </div>
+
+            <div class="Planner">
+                <i class="fa-regular fa-calendar"></i>
+                <div class="ProfileText">
+                    <h2>Study Planner</h2>
+                    <p>Organise your schedule and stay on track</p>
+                </div>
+            </div>
+
+            <div class="Announcement">
+                <i class="fa-solid fa-phone"></i>
+                <div class="ProfileText">
+                    <h2>Campus Announcement</h2>
+                    <p>Get the latest news and update from your school</p>
+                </div>
+            </div>
+
+            <div class="Found">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="ProfileText">
+                    <h2>Lost & Found</h2>
+                    <p>Report and recover lost belongings on campus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ALL-2">
+         <div class="Features-2">
+            <div class="MarketPlace">
+                <i class="fa-solid fa-shop"></i>
+                <div class="ProfileText">
+                    <h2>Campus MarketPlace</h2>
+                    <p>Buy and sell items with other students</p>
+                </div>
+            </div>
+
+            <div class="Notifications">
+                <i class="fa-solid fa-bell"></i>
+                <div class="ProfileText">
+                    <h2>Notifications</h2>
+                    <p>Stay informed with important updates and alerts</p>
+                </div>
+            </div>
+
+            <div class="Mode">
+                <i class="fa-regular fa-moon"></i>
+                <div class="ProfileText">
+                    <h2>Dark Mode</h2>
+                    <p>Switch to darker interface for better experience</p>
+                </div>
+            </div>
+
+            <div class="Connect">
+               <i class="fa-solid fa-person"></i>
+                <div class="ProfileText">
+                    <h2>Connect & Belong</h2>
+                    <p>Meet new people and become a part of your campus community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="FooterEnd" id="About">
+            <div class="FooterAbout">
+                <h4>About Campus Connect</h4>
+                <h2>More Than Just A Platform</h2>
+                <p>Campus Connect is designed to make your experiebce in University more smoother, smarter and more connected. Whether you're looking to study resources, campus events or just a place to get to know others, We got you covered</p>
+                <div class="Experience">
+                    <div class="key">
+                        <h2>7+</h2>
+                        <p>Key Features</p>
+                    </div>
+                    <div class="key">
+                        <h2>100%</h2>
+                        <p>Student Focused</p>
+                    </div>
+                    <div class="key">
+                        <h2>24/7</h2>
+                        <p>Always Here</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="FooterImage">
+                <img src="/Images/Image2.jpg" alt="Image2.jpg">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const DarkModeToggle = document.getElementById("DarkModeToggle");
+
+    DarkModeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            DarkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            DarkModeToggle.setAttribute("aria-label", "Switch to light mode");
+        } else {
+            DarkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            DarkModeToggle.setAttribute("aria-label", "Switch to dark mode");
+        }
+    });
+
+            window.addEventListener("load", function () {
+            window.scrollTo(0, 0);
+    });
+</script>
+</body>
+</html>
