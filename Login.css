@@ -23,10 +23,10 @@ body {
 
     /* Add your campus image here */
     background-image:
-        linear-gradient(
+        /* linear-gradient(
             rgba(5, 35, 78, 0.75),
             rgba(3, 20, 48, 0.78)
-        ),
+        ), */
         url("./images/image3.jpg");
 
     background-size: cover;
