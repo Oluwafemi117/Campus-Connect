@@ -457,38 +457,70 @@
     </main>
 
 
-    <!-- SMALL JAVASCRIPT FOR PASSWORD VISIBILITY -->
     <script>
-        function togglePassword(inputId, button) {
-            const input = document.getElementById(inputId);
-            const icon = button.querySelector("i");
+    // SHOW / HIDE PASSWORD
+    function togglePassword(inputId, button) {
+        const input = document.getElementById(inputId);
+        const icon = button.querySelector("i");
 
-            if (input.type === "password") {
-                input.type = "text";
-                icon.classList.remove("fa-eye-slash");
-                icon.classList.add("fa-eye");
-                button.setAttribute("aria-label", "Hide password");
-            } else {
-                input.type = "password";
-                icon.classList.remove("fa-eye");
-                icon.classList.add("fa-eye-slash");
-                button.setAttribute("aria-label", "Show password");
-            }
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+            button.setAttribute("aria-label", "Hide password");
+        } else {
+            input.type = "password";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+            button.setAttribute("aria-label", "Show password");
+        }
+    }
+
+    // REGISTRATION
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const fullName = document.getElementById("fullname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const matric = document.getElementById("matric").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const department = document.getElementById("department").value;
+        const level = document.getElementById("level").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+
+        const firstName = fullName.split(" ")[0];
+
+        // CHECK PASSWORDS
+        if (password !== confirmPassword) {
+            alert("Passwords do not match. Please try again.");
+            return;
         }
 
-        const form = document.querySelector("form");
+        // SAVE USER DETAILS
+        localStorage.setItem("firstName", firstName);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        localStorage.setItem("matric", matric);
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("department", department);
+        localStorage.setItem("level", level);
 
-        form.addEventListener("submit", function (event) {
-            const password = document.getElementById("password").value;
-            const confirmPassword =
-                document.getElementById("confirm-password").value;
+        // SAVE ACCOUNT TYPE
+        const accountType = document.querySelector(
+            'input[name="account_type"]:checked'
+        ).value;
 
-            if (password !== confirmPassword) {
-                event.preventDefault();
-                alert("Passwords do not match. Please try again.");
-            }
-        });
-    </script>
+        localStorage.setItem("accountType", accountType);
+        localStorage.setItem("isLoggedIn", "true")
 
+        alert("Registration successful!");
+
+        // GO TO DASHBOARD
+        window.location.href = "Dashboard.html";
+    });
+</script>
 </body>
 </html>

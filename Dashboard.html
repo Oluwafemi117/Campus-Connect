@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect | Student Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                Campus <span>Connect</span>
+            </div>
+
+            <nav>
+                <a href="Dashboard.html" class="active">Dashboard</a>
+                <a href="Profile.html">My Profile</a>
+                <a href="StudyPlanner.html">Study Planner</a>
+                <a href="Announcements.html">Announcements</a>
+                <a href="LostFound.html">Lost & Found</a>
+                <a href="Marketplace.html">Marketplace</a>
+                <a href="Notifications.html">Notifications</a>
+                <a href="Settings.html">Settings</a>
+            </nav>
+
+            <a href="Login.html" id="logoutBtn">Logout</a>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div class="search-box">
+                    <input type="search" placeholder="Search for anything...">
+                </div>
+
+                <div class="user-info">
+
+                    <button class="theme-toggle">☾</button>
+
+                    <button class="notification-btn">♧</button>
+
+                    <div class="profile">
+                        <img src="./Images/Image3.jpg" alt="Student Profile">
+                        <span id="topName">Student</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- WELCOME SECTION -->
+            <section class="welcome-banner">
+
+                <div class="welcome-text">
+
+                    <h1>
+                        Welcome back,<br>
+                        <span id="welcomeName">Student!</span>
+                    </h1>
+
+                    <p>
+                        Here's what's happening on Campus Connect today.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- QUICK ACTIONS -->
+            <section class="quick-actions">
+
+                <a href="Profile.html" class="action-card">
+                    <div class="action-icon">♙</div>
+                    <h4>View Profile</h4>
+                </a>
+
+                <a href="StudyPlanner.html" class="action-card">
+                    <div class="action-icon">▦</div>
+                    <h4>Plan Study</h4>
+                </a>
+
+                <a href="Announcements.html" class="action-card">
+                    <div class="action-icon">⚑</div>
+                    <h4>Check Announcements</h4>
+                </a>
+
+                <a href="LostFound.html" class="action-card">
+                    <div class="action-icon">⌕</div>
+                    <h4>Lost & Found</h4>
+                </a>
+
+                <a href="Marketplace.html" class="action-card">
+                    <div class="action-icon">🛒</div>
+                    <h4>Visit Marketplace</h4>
+                </a>
+
+                <a href="Notifications.html" class="action-card">
+                    <div class="action-icon">♧</div>
+                    <h4>View Notifications</h4>
+                </a>
+
+            </section>
+
+
+            <!-- DASHBOARD CONTENT -->
+            <section class="dashboard-grid">
+
+                <div class="left-column">
+
+                    <!-- STATISTICS -->
+                    <div class="stats">
+
+                        <div class="stat-card">
+                            <div class="stat-icon">♟</div>
+                            <h2>7+</h2>
+                            <p>Key Features</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">◆</div>
+                            <h2>100%</h2>
+                            <p>Student Focused</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">◷</div>
+                            <h2>24/7</h2>
+                            <p>Always Here</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- RECENT ANNOUNCEMENTS -->
+                    <div class="section-card">
+
+                        <div class="section-heading">
+                            <h3>Recent Announcements</h3>
+                            <a href="Announcements.html">View All →</a>
+                        </div>
+
+                        <div class="announcement">
+
+                            <img src="./Images/School.jpg" alt="Campus">
+
+                            <div>
+                                <h4>Semester Exams Schedule Released</h4>
+                                <p>Check the official timetable on your dashboard.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="announcement">
+
+                            <img src="./Images/image2.jpg" alt="Campus Activities">
+
+                            <div>
+                                <h4>Campus Clean-Up Exercise</h4>
+                                <p>Let's keep our campus clean and green.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="announcement">
+
+                            <img src="./Images/Image3.jpg" alt="Learning Resources">
+
+                            <div>
+                                <h4>New Online Learning Resources</h4>
+                                <p>Access more learning materials on Campus Connect.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT COLUMN -->
+                <div class="right-column">
+
+                    <!-- UPCOMING EVENTS -->
+                    <div class="section-card">
+
+                        <div class="section-heading">
+                            <h3>Upcoming Events</h3>
+                            <a href="#">View All →</a>
+                        </div>
+
+                        <div class="event">
+
+                            <div class="event-date">
+                                NOV
+                                <span>08</span>
+                            </div>
+
+                            <div class="event-info">
+                                <h4>Campus Town Hall Meeting</h4>
+                                <p>10:00 AM - 12:00 PM</p>
+                                <p>Main Auditorium</p>
+                            </div>
+
+                        </div>
+
+                        <div class="event">
+
+                            <div class="event-date">
+                                NOV
+                                <span>12</span>
+                            </div>
+
+                            <div class="event-info">
+                                <h4>Study Group Session</h4>
+                                <p>2:00 PM - 4:00 PM</p>
+                                <p>Library Block A</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOST AND FOUND -->
+                    <div class="lost-found">
+
+                        <h3>Lost Something?</h3>
+
+                        <p>
+                            Check our Lost & Found section or report a lost item.
+                            Let's help you find your belongings.
+                        </p>
+
+                        <a href="LostFound.html">
+                            Go to Lost & Found →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="Dashboard.JS"></script>
+
+</body>
+</html>
