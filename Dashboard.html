@@ -52,8 +52,11 @@
                     <button class="notification-btn">♧</button>
 
                     <div class="profile">
-                        <img src="./images/Image3.jpg" alt="Student Profile">
-                        <span id="topName">Student</span>
+                        <label for="profilePhotoInput" class="profile-photo-label">
+                            <img src="./images/Image3.jpg" alt="Student Profile" id="profilePicture" title="Click to change profile picture">
+                        </label>
+
+                        <input type="file" id="profilePhotoInput" accept="image/*" hidden>
                     </div>
 
                 </div>
