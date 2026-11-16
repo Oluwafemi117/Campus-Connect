@@ -7,12 +7,29 @@ if (localStorage.getItem("isLoggedIn") !== "true") {
     window.location.href = "Login.html";
 }
 
-// Get student's first name
-const firstName = localStorage.getItem("firstName") || "Student";
 
-// Display student's name
-document.getElementById("welcomeName").textContent =
-    firstName + "!";
+// GET STUDENT'S FULL NAME
+
+const studentProfile = JSON.parse(
+    localStorage.getItem("campusProfile")
+) || {};
+
+const fullName =
+    localStorage.getItem("fullName") ||
+    studentProfile.name ||
+    "Student";
+
+// Get the last name
+const secondName = fullName.trim().split(/\s+/).pop();
+
+
+// DISPLAY WELCOME MESSAGE
+
+const welcomeName = document.getElementById("welcomeName");
+
+if (welcomeName) {
+    welcomeName.textContent = "Welcome back, " + secondName + "!";
+}
 
 
 /* =================================
@@ -22,72 +39,83 @@ document.getElementById("welcomeName").textContent =
 const profilePicture = document.getElementById("profilePicture");
 const profilePhotoInput = document.getElementById("profilePhotoInput");
 
-// Create a separate storage key for each student
-const profileKey =
-    "campusConnectProfile_" + firstName.toLowerCase();
+// Identify each student uniquely
+const studentId =
+    localStorage.getItem("matric") ||
+    localStorage.getItem("email") ||
+    fullName;
 
-// Default profile picture
+// Create an individual storage key
+const profileKey =
+    "campusConnectProfilePicture_" + studentId.trim().toLowerCase();
+
+// Default picture for every student
 const defaultPicture = "./images/Image3.jpg";
 
-// Load saved profile picture
+// Load this student's saved picture
 const savedPicture = localStorage.getItem(profileKey);
 
-if (savedPicture) {
-    profilePicture.src = savedPicture;
-} else {
-    profilePicture.src = defaultPicture;
+if (profilePicture) {
+    profilePicture.src = savedPicture || defaultPicture;
 }
 
-// Open file selector and upload picture
-profilePhotoInput.addEventListener("change", function () {
+// UPLOAD PROFILE PICTURE
 
-    const file = profilePhotoInput.files[0];
+if (profilePhotoInput) {
 
-    if (!file) {
-        return;
-    }
+    profilePhotoInput.addEventListener("change", function () {
 
-    // Check if selected file is an image
-    if (!file.type.startsWith("image/")) {
-        alert("Please select a valid image.");
-        profilePhotoInput.value = "";
-        return;
-    }
+        const file = profilePhotoInput.files[0];
 
-    // Limit image size to 1MB
-    if (file.size > 1024 * 1024) {
-        alert("Please select an image smaller than 1MB.");
-        profilePhotoInput.value = "";
-        return;
-    }
-
-    const reader = new FileReader();
-
-    reader.onload = function (event) {
-
-        const imageData = event.target.result;
-
-        try {
-
-            // Save picture in localStorage
-            localStorage.setItem(profileKey, imageData);
-
-            // Display uploaded picture
-            profilePicture.src = imageData;
-
-            alert("Profile picture updated successfully!");
-
-        } catch (error) {
-
-            alert("Unable to save picture. Please try another image.");
-
+        if (!file) {
+            return;
         }
 
-    };
+        // Check if selected file is an image
+        if (!file.type.startsWith("image/")) {
+            alert("Please select a valid image.");
+            profilePhotoInput.value = "";
+            return;
+        }
 
-    reader.readAsDataURL(file);
+        // Limit image size to 1MB
+        if (file.size > 1024 * 1024) {
+            alert("Please select an image smaller than 1MB.");
+            profilePhotoInput.value = "";
+            return;
+        }
 
-});
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+
+            const imageData = event.target.result;
+
+            try {
+
+                // Save picture in localStorage
+                localStorage.setItem(profileKey, imageData);
+
+                // Display uploaded picture
+                if (profilePicture) {
+                    profilePicture.src = imageData;
+                }
+
+                alert("Profile picture updated successfully!");
+
+            } catch (error) {
+
+                alert("Unable to save picture. Please try another image.");
+
+            }
+
+        };
+
+        reader.readAsDataURL(file);
+
+    });
+
+}
 
 
 /* =================================
@@ -96,17 +124,21 @@ profilePhotoInput.addEventListener("change", function () {
 
 const themeToggle = document.querySelector(".theme-toggle");
 
-themeToggle.addEventListener("click", function () {
+if (themeToggle) {
 
-    document.body.classList.toggle("dark-mode");
+    themeToggle.addEventListener("click", function () {
 
-    if (document.body.classList.contains("dark-mode")) {
-        themeToggle.textContent = "☀️";
-    } else {
-        themeToggle.textContent = "☾";
-    }
+        document.body.classList.toggle("dark-mode");
 
-});
+        if (document.body.classList.contains("dark-mode")) {
+            themeToggle.textContent = "☀";
+        } else {
+            themeToggle.textContent = "☾";
+        }
+
+    });
+
+}
 
 
 /* =================================
@@ -115,11 +147,15 @@ themeToggle.addEventListener("click", function () {
 
 const notificationBtn = document.querySelector(".notification-btn");
 
-notificationBtn.addEventListener("click", function () {
+if (notificationBtn) {
 
-    alert("You have no new notifications!");
+    notificationBtn.addEventListener("click", function () {
 
-});
+        alert("You have no new notifications!");
+
+    });
+
+}
 
 
 /* =================================
@@ -128,27 +164,31 @@ notificationBtn.addEventListener("click", function () {
 
 const searchInput = document.querySelector(".search-box input");
 
-searchInput.addEventListener("keyup", function () {
+if (searchInput) {
 
-    const searchValue = searchInput.value.toLowerCase();
+    searchInput.addEventListener("keyup", function () {
 
-    const dashboardItems = document.querySelectorAll(
-        ".action-card, .announcement, .event, .lost-found"
-    );
+        const searchValue = searchInput.value.toLowerCase();
 
-    dashboardItems.forEach(function (item) {
+        const dashboardItems = document.querySelectorAll(
+            ".action-card, .announcement, .event, .lost-found"
+        );
 
-        const itemText = item.textContent.toLowerCase();
+        dashboardItems.forEach(function (item) {
 
-        if (itemText.includes(searchValue)) {
-            item.style.display = "";
-        } else {
-            item.style.display = "none";
-        }
+            const itemText = item.textContent.toLowerCase();
+
+            if (itemText.includes(searchValue)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+
+        });
 
     });
 
-});
+}
 
 
 /* =================================
@@ -157,8 +197,14 @@ searchInput.addEventListener("keyup", function () {
 
 const logoutBtn = document.getElementById("logoutBtn");
 
-logoutBtn.addEventListener("click", function () {
+if (logoutBtn) {
 
-    localStorage.removeItem("isLoggedIn");
+    logoutBtn.addEventListener("click", function () {
 
-});
+        localStorage.removeItem("isLoggedIn");
+
+        window.location.href = "Login.html";
+
+    });
+
+}

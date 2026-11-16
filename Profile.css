@@ -1,0 +1,459 @@
+
+/* =================================
+   1. GENERAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+    color: #26344a;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+
+/* =================================
+   2. DASHBOARD LAYOUT
+================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   3. SIDEBAR
+================================= */
+
+.sidebar {
+    width: 250px;
+    background: #101d35;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+.logo span {
+    color: #075bea;
+    display: block;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a {
+    padding: 13px 15px;
+    border-radius: 9px;
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #075bea;
+    color: white;
+}
+
+#logoutBtn {
+    margin-top: auto;
+    padding: 13px 15px;
+    color: #ff7777;
+    font-size: 14px;
+}
+
+
+/* =================================
+   4. MAIN CONTENT
+================================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+
+/* =================================
+   5. TOPBAR
+================================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.topbar h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.topbar p {
+    color: #8491a5;
+    font-size: 14px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: white;
+    color: #075bea;
+    font-size: 22px;
+}
+
+.user-info img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #075bea;
+}
+
+
+/* =================================
+   6. PROFILE HEADER
+================================= */
+
+.profile-header {
+    background: linear-gradient(120deg, #075bea, #123c80);
+    color: white;
+    padding: 35px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(7, 91, 234, 0.12);
+}
+
+.profile-picture {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.profile-picture img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.change-picture {
+    display: inline-block;
+    background: white;
+    color: #075bea;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.change-picture:hover {
+    background: #e6efff;
+}
+
+.profile-heading h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.profile-heading p {
+    margin-bottom: 10px;
+    color: #dce8ff;
+}
+
+.profile-heading span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+/* =================================
+   7. SECTION CARDS
+================================= */
+
+.section-card {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2,
+.edit-section h2 {
+    font-size: 19px;
+    color: #26344a;
+}
+
+#editProfileBtn {
+    background: #075bea;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+#editProfileBtn:hover {
+    background: #003da8;
+}
+
+
+/* =================================
+   8. PROFILE INFORMATION GRID
+================================= */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.info-item {
+    padding: 16px;
+    background: #f6f8fc;
+    border-radius: 10px;
+    border-left: 3px solid #075bea;
+}
+
+.info-item label {
+    display: block;
+    color: #8995a8;
+    font-size: 12px;
+    margin-bottom: 9px;
+}
+
+.info-item p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #26344a;
+    overflow-wrap: anywhere;
+}
+
+
+/* =================================
+   9. EDIT PROFILE FORM
+================================= */
+
+.edit-section h2 {
+    margin-bottom: 22px;
+}
+
+#profileForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+#profileForm label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #526078;
+}
+
+#profileForm input,
+#profileForm select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce3ef;
+    border-radius: 8px;
+    outline: none;
+    background: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#profileForm input:focus,
+#profileForm select:focus {
+    border-color: #075bea;
+}
+
+#profileForm button {
+    background: #075bea;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#profileForm button:hover {
+    background: #003da8;
+}
+
+
+/* =================================
+   10. FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    color: #8995a8;
+    font-size: 13px;
+}
+
+
+/* =================================
+   11. DARK MODE
+================================= */
+
+body.dark-mode {
+    background: #101827;
+    color: white;
+}
+
+body.dark-mode .section-card {
+    background: #1d293b;
+}
+
+body.dark-mode .section-heading h2,
+body.dark-mode .edit-section h2 {
+    color: white;
+}
+
+body.dark-mode .info-item {
+    background: #26354a;
+}
+
+body.dark-mode .info-item p {
+    color: white;
+}
+
+body.dark-mode #profileForm label {
+    color: #cbd5e1;
+}
+
+body.dark-mode #profileForm input,
+body.dark-mode #profileForm select {
+    background: #26354a;
+    color: white;
+    border-color: #40516b;
+}
+
+body.dark-mode .topbar p {
+    color: #aab6c8;
+}
+
+
+/* =================================
+   12. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        padding: 22px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .logo {
+        margin-bottom: 18px;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #logoutBtn {
+        margin-top: 18px;
+    }
+
+    .main-content {
+        padding: 18px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px;
+    }
+
+    .profile-heading h1 {
+        font-size: 23px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-card {
+        padding: 20px;
+    }
+
+    .topbar h2 {
+        font-size: 20px;
+    }
+
+}
+

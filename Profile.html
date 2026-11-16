@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Connect | My Profile</title>
+
+    <link rel="stylesheet" href="Profile.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                Campus <span>Connect</span>
+            </div>
+
+            <nav>
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="Profile.html" class="active">My Profile</a>
+                <a href="StudyPlanner.html">Study Planner</a>
+                <a href="Announcements.html">Announcements</a>
+                <a href="LostFound.html">Lost & Found</a>
+                <a href="Marketplace.html">Marketplace</a>
+                <a href="Notifications.html">Notifications</a>
+                <a href="Settings.html">Settings</a>
+            </nav>
+
+            <a href="Login.html" id="logoutBtn">Logout</a>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div>
+                    <h2>My Profile</h2>
+                    <p>Manage your personal information</p>
+                </div>
+
+                <div class="user-info">
+
+                    <button class="theme-toggle">☾</button>
+
+                    <img
+                        src="./images/Image3.jpg"
+                        alt="Profile Picture"
+                        id="topProfilePicture"
+                    >
+
+                </div>
+
+            </header>
+
+
+            <!-- PROFILE HEADER -->
+            <section class="profile-header">
+
+                <div class="profile-picture">
+
+                    <img
+                        src="./images/Image3.jpg"
+                        alt="Student Profile"
+                        id="profilePicture"
+                    >
+
+                    <label for="profilePhotoInput" class="change-picture">
+                        Change Photo
+                    </label>
+
+                    <input
+                        type="file"
+                        id="profilePhotoInput"
+                        accept="image/*"
+                        hidden
+                    >
+
+                </div>
+
+                <div class="profile-heading">
+
+                    <h1 id="fullName">Student Name</h1>
+
+                    <p id="department">Computer Science</p>
+
+                    <span>300 Level Student</span>
+
+                </div>
+
+            </section>
+
+
+            <!-- PERSONAL INFORMATION -->
+            <section class="section-card">
+
+                <div class="section-heading">
+
+                    <h2>Personal Information</h2>
+
+                    <button id="editProfileBtn">Edit Profile</button>
+
+                </div>
+
+                <div class="profile-grid">
+
+                    <div class="info-item">
+                        <label>Full Name</label>
+                        <p id="displayName">Student Name</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Email Address</label>
+                        <p id="displayEmail">Not provided</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Phone Number</label>
+                        <p id="displayPhone">Not provided</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Gender</label>
+                        <p id="displayGender">Not provided</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Matric Number</label>
+                        <p id="displayMatric">Not provided</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Level</label>
+                        <p id="displayLevel">Loading level...</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ACADEMIC INFORMATION -->
+            <section class="section-card">
+
+                <div class="section-heading">
+                    <h2>Academic Information</h2>
+                </div>
+
+                <div class="profile-grid">
+
+                    <div class="info-item">
+                        <label>Institution</label>
+                        <p>Bamidele Olumilua University</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Faculty</label>
+                        <p>Physical Science</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Department</label>
+                        <p>Computer Science</p>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Course of Study</label>
+                        <p>Computer Science</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- EDIT PROFILE FORM -->
+            <section class="section-card edit-section" id="editSection">
+
+                <h2>Edit Your Information</h2>
+
+                <form id="profileForm">
+
+                    <label for="studentName">Full Name</label>
+                    <input type="text" id="studentName" required>
+
+                    <label for="studentEmail">Email Address</label>
+                    <input type="email" id="studentEmail">
+
+                    <label for="studentPhone">Phone Number</label>
+                    <input type="tel" id="studentPhone">
+
+                    <label for="studentGender">Gender</label>
+                    <select id="studentGender">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="studentMatric">Matric Number</label>
+                    <input type="text" id="studentMatric">
+
+                    <button type="submit">Save Changes</button>
+
+                </form>
+
+            </section>
+
+
+            <footer>
+                <p>© 2026 Campus Connect. All Rights Reserved.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="Profile.js"></script>
+    <script src="Theme.js"></script>
+
+</body>
+</html>
