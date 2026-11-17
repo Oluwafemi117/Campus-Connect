@@ -46,8 +46,13 @@ function updateProfileDetails() {
     document.getElementById("displayMatric").textContent =
         studentProfile.matric || "Not provided";
     
+    let studentLevel = studentProfile.level || localStorage.getItem("level") || "Not provided"
+
     document.getElementById("displayLevel").textContent = 
         studentProfile.level || localStorage.getItem("level") || "Not provided";
+
+    document.getElementById("headerLevel").textContent =
+        studentLevel + " Level Student"; 
     
 }
 
@@ -243,3 +248,22 @@ if (profileForm) {
     });
 
 }
+
+
+/* MOBILE HAMBURGER MENU */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+
+    navLinks.classList.toggle("show");
+
+    if (navLinks.classList.contains("show")) {
+        menuToggle.textContent = "✕";
+    } else {
+        menuToggle.textContent = "☰";
+    }
+
+});
+

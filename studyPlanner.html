@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Planner | Campus Connect</title>
+
+    <link rel="stylesheet" href="StudyPlanner.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="planner-header">
+
+    <div class="planner-header-top">
+
+        <div class="logo">
+            Campus Connect
+        </div>
+
+        <div class="header-controls">
+
+            <button id="themeToggle" class="theme-toggle" type="button">
+                🌙
+            </button>
+
+            <button id="menuToggle" class="menu-toggle" type="button">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+    <nav id="navLinks">
+
+        <a href="Dashboard.html">Dashboard</a>
+
+        <a href="Profile.html">My Profile</a>
+
+        <a href="StudyPlanner.html" class="active">Study Planner</a>
+
+        <a href="Announcements.html">Announcements</a>
+
+        <a href="LostFound.html">Lost & Found</a>
+
+        <a href="Marketplace.html">Marketplace</a>
+
+        <a href="Notifications.html">Notifications</a>
+
+        <a href="Settings.html">Settings</a>
+
+        <a href="Login.html" id="logoutBtn">Logout</a>
+
+    </nav>
+
+</header>
+
+
+    <!-- MAIN CONTAINER -->
+
+    <main class="planner-container">
+
+        <!-- WELCOME SECTION -->
+
+        <section class="welcome-section">
+
+            <div>
+                <h1>My Study Planner</h1>
+
+                <p>
+                    Organise your study time, manage your courses
+                    and stay on top of your academic goals.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW CARDS -->
+
+        <section class="overview-cards">
+
+            <div class="overview-card">
+                <h3>Total Tasks</h3>
+                <h2 id="totalTasks">0</h2>
+                <p>All study activities</p>
+            </div>
+
+            <div class="overview-card">
+                <h3>Completed</h3>
+                <h2 id="completedTasks">0</h2>
+                <p>Tasks finished</p>
+            </div>
+
+            <div class="overview-card">
+                <h3>Pending</h3>
+                <h2 id="pendingTasks">0</h2>
+                <p>Tasks remaining</p>
+            </div>
+
+            <div class="overview-card">
+                <h3>Progress</h3>
+                <h2 id="studyProgress">0%</h2>
+                <p>Your study progress</p>
+            </div>
+
+        </section>
+
+
+        <!-- ADD STUDY TASK -->
+
+        <section class="add-task-section">
+
+            <h2>Create Study Schedule</h2>
+
+            <p>
+                Add a new subject or academic activity to your timetable.
+            </p>
+
+            <form id="studyForm">
+
+                <div class="form-group">
+
+                    <label for="courseName">Course Title</label>
+
+                    <input
+                        type="text"
+                        id="courseName"
+                        placeholder="e.g. CSC 301 - Web Development"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="taskDescription">Description</label>
+
+                    <textarea
+                        id="taskDescription"
+                        placeholder="What do you plan to study?"
+                        rows="3"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="studyDate">Study Date</label>
+
+                        <input
+                            type="date"
+                            id="studyDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="startTime">Start Time</label>
+
+                        <input
+                            type="time"
+                            id="startTime"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="endTime">End Time</label>
+
+                        <input
+                            type="time"
+                            id="endTime"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="taskType">Activity Type</label>
+
+                    <select id="taskType" required>
+
+                        <option value="">Select Activity</option>
+
+                        <option value="Personal Reading">
+                            Personal Reading
+                        </option>
+
+                        <option value="Assignment">
+                            Assignment
+                        </option>
+
+                        <option value="Group Study">
+                            Group Study
+                        </option>
+
+                        <option value="Revision">
+                            Revision
+                        </option>
+
+                        <option value="Exam Preparation">
+                            Exam Preparation
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit" id="addTaskBtn">
+                    Add to My Schedule
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- WEEKLY SCHEDULE -->
+
+        <section class="schedule-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>My Study Schedule</h2>
+
+                    <p>View and manage your planned activities.</p>
+                </div>
+
+            </div>
+
+
+            <div class="schedule-filters">
+
+                <button type="button" class="filter-btn active" data-filter="all">
+                    All Tasks
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="today">
+                    Today
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="upcoming">
+                    Upcoming
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+
+            <!-- TASKS WILL APPEAR HERE -->
+
+            <div id="studyTasks" class="study-tasks">
+
+                <div class="empty-state" id="emptyState">
+
+                    <h3>No Study Tasks Yet</h3>
+
+                    <p>
+                        You haven't created a study schedule.
+                        Add your first task above to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS SECTION -->
+
+        <section class="progress-section">
+
+            <h2>My Study Progress</h2>
+
+            <p>Track how much of your study schedule you've completed.</p>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+            <p id="progressText">0% completed</p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Campus Connect.
+            More Than Just A Platform.
+        </p>
+
+    </footer>
+
+
+    <script src="studyPlanner.js"></script>
+
+</body>
+</html>

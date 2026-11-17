@@ -25,6 +25,18 @@ button {
     border: none;
 }
 
+/* HAMBURGER BUTTON */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
 
 /* =================================
    2. DASHBOARD LAYOUT
@@ -385,9 +397,12 @@ body.dark-mode .topbar p {
 }
 
 
+
 /* =================================
    12. RESPONSIVE DESIGN
 ================================= */
+
+/* TABLET */
 
 @media (max-width: 900px) {
 
@@ -400,60 +415,198 @@ body.dark-mode .topbar p {
     }
 
     .profile-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
+
+/* MOBILE */
+
 @media (max-width: 650px) {
+
+    /* MAIN LAYOUT */
 
     .dashboard {
         flex-direction: column;
+        min-height: 100vh;
     }
+
+
+    /* SIDEBAR */
 
     .sidebar {
         width: 100%;
         padding: 18px;
+        position: relative;
+        z-index: 100;
+    }
+
+
+    /* SIDEBAR TOP */
+
+    .sidebar-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .logo {
-        margin-bottom: 18px;
+        font-size: 21px;
+        margin-bottom: 0;
     }
+
+
+    /* HAMBURGER */
+
+    .menu-toggle {
+        display: block;
+        background: transparent;
+        color: white;
+        font-size: 28px;
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+
+    /* NAVIGATION */
 
     .sidebar nav {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+
+        padding: 0 12px;
+        margin-top: 0;
+
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            padding 0.3s ease,
+            margin 0.3s ease;
     }
 
-    #logoutBtn {
+
+    /* OPEN MENU */
+
+    .sidebar nav.show {
+        max-height: 600px;
+        opacity: 1;
+        padding: 12px;
         margin-top: 18px;
     }
 
+
+    .sidebar nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+
+    #logoutBtn {
+        margin-top: 8px;
+    }
+
+
+    /* MAIN CONTENT */
+
     .main-content {
+        width: 100%;
         padding: 18px;
     }
 
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-        padding: 25px 15px;
-    }
 
-    .profile-heading h1 {
-        font-size: 23px;
-    }
+    /* TOPBAR */
 
-    .profile-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-card {
-        padding: 20px;
+    .topbar {
+        gap: 12px;
+        margin-bottom: 25px;
     }
 
     .topbar h2 {
         font-size: 20px;
     }
 
-}
+    .topbar p {
+        font-size: 12px;
+    }
 
+    .user-info {
+        gap: 10px;
+    }
+
+    .user-info img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+
+
+    /* PROFILE HEADER */
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px;
+        gap: 18px;
+    }
+
+    .profile-picture img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile-heading h1 {
+        font-size: 23px;
+    }
+
+
+    /* PROFILE INFORMATION */
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .section-card {
+        padding: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 17px;
+    }
+
+
+    /* EDIT FORM */
+
+    #profileForm input,
+    #profileForm select {
+        font-size: 14px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        font-size: 11px;
+        padding: 20px 5px;
+    }
+
+}
